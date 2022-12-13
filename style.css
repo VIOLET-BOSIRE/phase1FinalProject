@@ -31,4 +31,36 @@ section{
     max-width: 900px;
     margin:0 auto;
     box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 50px 30px;
+    border-radius: 25px;
+
 }
+.header{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+.header h1{
+    font-size: 30px;
+    font-weight: 900;
+    
+}
+input{
+    border:none;
+    border-bottom: 2px solid rgba(128, 128, 128,0.479);
+    margin-bottom: 10px;
+    outline: none;
+    color:gray;
+    width:100%;
+
+
+}
+input::placeholder {
+    color: gray;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  
