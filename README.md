@@ -26,6 +26,6 @@ Bugs and known issues
     None at the moment.
     Should you find any, please reach out via the developer contact provided below.
 
-Reach out to me via: E-mailviolet.bosire@student.moringa.com• Phone 0700411123
+Reach out to me via: E-mail violet.bosire@student.moringa.com• Phone 0700411123
 
 This project is licensed under the MIT License Copyright ©2022 Violet Bosire
