@@ -4,52 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Master Tour</title>
 </head>
 <body>
-    <section>
-        <div class="container">
-            <div class="header">
-                <h1 class="logo">PhotoGallery</h1>
-                <form>
-                    <input type = text placeholder="search image"/>
-                    <ion-icon name='search-outline'></ion-icon>
+    <nav>
+        <div class="welcome">
+           THE MASTER TOUR
+        </div>
+        <div>
+           <a href="#about-us">About Us</a>
+        </div>
+        <div class="logo">
+            <img class="logoImg" src="https://github.com/TheEmerald001/Kakamega_RainForest/raw/main/logoImg.png" alt="">
+        </div>
+    </nav>
+    <section class="secOne">
+        <div class="main">
+            <div class="leftSide">
+                <h2>Welcome to this collabarative platform</h2>
+                <div id="about-us">
+                    <h1 class="gradient"></h1>
+                   <span class="desc">
+                        The Master Tour™ is an online collaborative platform that allows you to browse and interact with nature posts from other
+                        nature lovers. Your will see cataloges of postings and can update the descriptions for a more precise representation. In addition
+                        to this, your are able to delete erranoius or false listing to save others from misinformation.
+                        To get started, Select a category alongside.
+                    </span>
+                </div>
+            </div>
+            <div class="rightSide">
+                <form id="trail-form">
+                    <label for="name" class="name">Enter your name:</label> <br>
+                    <input type="text" class="nameText"> <br>
+                    <label for="trail" class="trail" id="trailSelect">Select an Item to continue</label><br>
+                    <input type="radio" name="startTrail" id="trail1" value="wildlife" class="text"><span class="textA"> Wildlife </span> <br>
+                    <input type="radio" name="startTrail" id="trail2" value="vegetation" class="text"><span class="textA"> Vegetation </span><br>
+                    <input type="radio" name="startTrail" id="trail3" value="attractions" class="text"><span class="textA"> Attractions </span><br>
+                    <input type="submit" class="buttons" id= "submitBtn" onclick="selectScene()" value="Get Started"/>
                 </form>
             </div>
-            <div class ="gallery">
-                <div class = "item">
-                    <a href="#">
-                        <img src="./pexels-pixabay-247431.jpg" alt="elephant">
-                        <h3>photographer Name</h3>
-                    </a>
-                    
-                </div>
-                <div class = "item">
-                    <a href="#">
-                        <img src="./pexels-jeremy-bishop-2765872.jpg" alt="elephant">
-                    </a>
-                    <h3>photographer Name</h3>
-
-                </div>
-                <div class = "item">
-                    <a href="#">
-                        <img src="./pexels-jeremy-bishop-2422915.jpg" alt="elephant">
-                        <h3>photographer Name</h3>
-                    </a>
-                    
-
-                </div>
-                <div class = "item">
-                    <a href="#">
-                        <img src="./pexels-cesar-aguilar-1123771.jpg" alt="elephant">
-                    </a>
-                    <h3>photographer Name</h3>
-
-                </div>
-            </div>
+        </div>
+        
+    </section>
+    <section id="display" class="secTwo">
+        <div id="trailhead" class="trailhead">
+            <form id="input-form" >
+                <h4 id="instructions">Fill the form below to contribute to the Catalogue</h4>
+                <label> Name: <input type="text" name="name" id="name" /></label>
+                <label> age: <input type="text" name="age" id="age" /></label>
+                <label> Location: <input type="text" name="location" id="location" /></label>
+                <label> Description: <input type="text" name="description" id="description" /></label>
+                <label> ImageURL: <input type="text" name="image" id="image" /></label><br />
+                <button id="submit" class="buttons" type="submit">Post Item</button>
+            </form>
+        </div>
+        <div id="allSpecies" class="allSpecies"></div>
+        <div class="nxtBtn">
+            <button class="buttons"> <a href="#input-form">Add Your contribution</a></button>
+            <button class="buttons"> <a href="#trail-form">Change List</a></button>
         </div>
     </section>
-    <script  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+    <section>
+        <div class="footer">
+            <h5>©2022 The Master Tour™</h5>
+        </div>
+    </section>
+    <script src="./assets/index.js"></script>
 </body>
 </html>
