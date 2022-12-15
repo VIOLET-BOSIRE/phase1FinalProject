@@ -1,0 +1,105 @@
+{
+"wildlife":[
+    {
+    "id":1,
+    "name": "Lion",
+    "age":10,
+    "location":"Maasai Mara",
+    "image": "https://s25.postimg.org/55ot26lq7/lion_large.jpg",
+    "description":"king of the jungle"
+    },
+    {
+    "id":2,
+    "name" : "Monkey",
+    "age":10,
+    "location":"Maasai Mara",
+    "image": "https://s25.postimg.org/f49ronv5r/monkey_large.jpg",
+    "description":"cheekiest mammal"
+    },
+    
+    {
+        "id":3,
+       "name" :"Peacock",
+       "age":10,
+       "location":"Maasai Mara",
+       "image": "https://s25.postimg.org/oelvs75vj/peacock_large.jpg",
+       "description":"as proud as a peacock"
+    },
+    {
+        "id":4,
+       "name" :"Piegon",
+       "age":10,
+       "location":"Maasai Mara",
+       "image": "https://s25.postimg.org/oelvs75vj/peacock_large.jpg",
+       "description":"a small bird"
+    
+    }
+    
+    ],
+ "vegetation":[
+        {
+       "id":1,
+       "name" :"Acrocarpus fraxinifolius",
+       "age":10,
+       "location":"kenya",
+       "image": "https://d3vpr8bfai7brw.cloudfront.net/species-collection/TFK_Acrocarpus_fraxinifolius.jpeg",
+       "description":"Acrocarpus fraxinifolius is foliage deciduous trees. Also classified as exotic big tree that can grow up to 60 m height."
+
+        },
+        {
+            "id":2,
+            "name" :"Markhamia lutea",
+            "age":10,
+            "location":"kenya",
+            "image":"https://d3vpr8bfai7brw.cloudfront.net/species-collection/TFK_Grevillea_robusta.jpeg",
+            "description":"Grevillearobusta is an evergreen foliage. It is an exotic tree with an average of 10 m height with 100 cm diameter. The trees it self can grow quite fast."
+        },
+        {
+            "id":3,
+            "name" :"Podocarpus falcatu",
+            "age":10,
+            "location":"kenya",
+            "image":"https://d3vpr8bfai7brw.cloudfront.net/species-collection/TFK_Podocarpus_falcatus.jpeg",
+            "description":"Podocarpus falcatus is a foliage deciduous native. Classified as big trees that usually grow up to 30 - 46 m height. It is very good be a used as reforestation species."
+        },
+        {
+            "id":4,
+            "name" :"Prunus africana",
+            "age":10,
+            "location":"kenya",
+            "image":"https://d3vpr8bfai7brw.cloudfront.net/species-collection/TAU_Prunus_Africana.jpg",
+            "description":"Prunus africana is a rosaceae family which can grow up to 25 m. It is an evergreen and native tree which can be used for reforestation also extract to be a medicine."
+        }
+        
+
+
+    ],
+    "attractions":[
+        {
+        "id":1,
+       "name" :"The Arboretum",
+       "age":10,
+       "location":"Nairobi",
+       "image": "https://s25.postimg.org/oelvs75vj/peacock_large.jpg",
+       "description":"Picnic grounds"
+      },
+      {
+      "id":2,
+       "name" :"The Nairobi National Park",
+       "age":10,
+       "location":"Nairobi",
+       "image": "https://s25.postimg.org/oelvs75vj/peacock_large.jpg",
+       "description":"The only national park in the city"
+      },
+      {
+      "id":3,
+       "name" :"Thompsons fall",
+       "age":10,
+       "location":"Thika",
+       "image": "https://s25.postimg.org/oelvs75vj/peacock_large.jpg",
+       "description":"Waterfall"
+      }
+    
+
+    ]
+}
