@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/styles.css">
     <title>Master Tour</title>
 </head>
 <body>
@@ -44,7 +44,7 @@
                     <input type="radio" name="startTrail" id="trail1" value="wildlife" class="text"><span class="textA"> Wildlife </span> <br>
                     <input type="radio" name="startTrail" id="trail2" value="vegetation" class="text"><span class="textA"> Vegetation </span><br>
                     <input type="radio" name="startTrail" id="trail3" value="attractions" class="text"><span class="textA"> Attractions </span><br>
-                    <input type="submit" class="buttons" id= "submitBtn" onclick="selectScene()" value="Get Started"/>
+                    <input type="submit" class="buttons" id= "submitBtn" value="Get Started"/>
                 </form>
             </div>
         </div>
@@ -54,11 +54,11 @@
         <div id="trailhead" class="trailhead">
             <form id="input-form" >
                 <h4 id="instructions">Fill the form below to contribute to the Catalogue</h4>
-                <label> Name: <input type="text" name="name" id="name" /></label>
-                <label> age: <input type="text" name="age" id="age" /></label>
-                <label> Location: <input type="text" name="location" id="location" /></label>
-                <label> Description: <input type="text" name="description" id="description" /></label>
-                <label> ImageURL: <input type="text" name="image" id="image" /></label><br />
+                <label> Name: <input type="text" name="name" id="name"  required/></label>
+                <label> age: <input type="text" name="age" id="age"  required/></label>
+                <label> Location: <input type="text" name="location" id="location" required /></label>
+                <label> Description: <input type="text" name="description" id="description" required /></label>
+                <label> ImageURL: <input type="text" name="image" id="image" required /></label><br />
                 <button id="submit" class="buttons" type="submit">Post Item</button>
             </form>
         </div>
@@ -73,6 +73,6 @@
             <h5>©2022 The Master Tour™</h5>
         </div>
     </section>
-    <script src="./index.js"></script>
+    <script src="./assets/index.js"></script>
 </body>
 </html>

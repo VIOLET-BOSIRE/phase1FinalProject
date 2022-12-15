@@ -12,7 +12,7 @@ startDoc.addEventListener("submit", (e) =>{
     parentContainer.innerHTML = "";
     route = startRoute;
     function selectScene () {
-        fetch(`http://localhost:3000/${startRoute}`)
+        fetch(`https://test-backend-production-30ff.up.railway.app/${startRoute}`)
           .then(response => response.json())
           .then(payloadIterator);
     }
@@ -22,7 +22,7 @@ startDoc.addEventListener("submit", (e) =>{
 
 //this function shall fetch from the backend and return the required resources to load
 function getScene () {
-    fetch(`http://localhost:3000/wildlife`)
+    fetch(`https://test-backend-production-30ff.up.railway.app/wildlife`)
       .then(response => response.json())
       .then(payloadIterator);
 }
@@ -111,7 +111,7 @@ function handleSubmit(e){
 }
 
 function postData(sceneData){
-    fetch("http://localhost:3000/wildlife", {
+    fetch("https://test-backend-production-30ff.up.railway.app/wildlife", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -126,7 +126,7 @@ function ammender(id){
 }
 
 function deleteScene(scene){
-    fetch(`http://localhost:3000/wildlife/${scene.id}`, {
+    fetch(`https://test-backend-production-30ff.up.railway.app/wildlife/${scene.id}`, {
         method: 'DELETE'
     })
 }
