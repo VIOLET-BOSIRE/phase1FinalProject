@@ -1,5 +1,18 @@
 
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: azure;
+}
+.secOne{
+    width: 100%;
+    padding: 4em 0;
+    background-color: rgb(102, 118, 24, 0.2);
+}
     
 
 
