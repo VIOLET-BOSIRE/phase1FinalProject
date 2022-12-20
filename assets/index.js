@@ -131,5 +131,12 @@ function deleteScene(scene){
 }
 
 document.getElementById('log-in').addEventListener('click', ()=>{
+    document.getElementById('topRightFixed').style.display = "block"
+
+    const submitDetail = document.getElementById('userDetailSubmission')
+    submitDetail.addEventListener("click", (e)=> {
+        e.preventDefault();
+        document.getElementById('topRightFixed').style.display = "none"
+    })
     
 })
