@@ -1,38 +1,37 @@
 window.addEventListener("DOMContentLoaded", getScene)
+
+//select the container to display all fetched items
 const parentContainer = document.getElementById("allSpecies")
 
-// define values to start seeking from endpoint
+// define values to start seeking from endpoint on user request
 const startDoc = document.getElementById("trail-form")
 
-let startRoute;
 
 startDoc.addEventListener("submit", (e) =>{
     e.preventDefault();
-    startRoute = e.target.startTrail.value;
+    let startRoute = e.target.startTrail.value;
     parentContainer.innerHTML = "";
-    route = startRoute;
-    function selectScene () {
-        fetch(`https://test-backend-production-30ff.up.railway.app/${startRoute}`)
-          .then(response => response.json())
-          .then(payloadIterator);
-    }
-    console.log(startRoute)
-    selectScene(); 
+    selectScene(startRoute); 
 })
 
-//this function shall fetch from the backend and return the required resources to load
+// fetch data from a specified resourece
+function selectScene (startRoute) {
+    fetch(` http://localhost:3000/${startRoute}`)
+      .then(response => response.json())
+      .then(payloadIterator);
+}
+
+//this function shall fetch the default landing page data
 function getScene () {
-    fetch(`https://test-backend-production-30ff.up.railway.app/wildlife`)
+    fetch(` http://localhost:3000/wildlife`)
       .then(response => response.json())
       .then(payloadIterator);
 }
 
 // iterates the payload to provide individual elements
-function payloadIterator(payload){
-    
+function payloadIterator(payload){    
     payload.forEach(renderItem);
 }
-
 
 function renderItem(element){
     const itemContainer = document.createElement('div');
@@ -86,10 +85,8 @@ function renderItem(element){
     deleteB.addEventListener('click', () => {
         deleteScene(element);
     })
-
-    
+    // add all created items to the parent container
     parentContainer.appendChild(itemContainer)
-
 }
 
 const form = document.querySelector("#input-form")
@@ -97,27 +94,29 @@ form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(e){
     e.preventDefault();
+
+    let trail = document.querySelector("#categories").value
     let sceneData = {
         name:e.target.name.value,
         age:e.target.age.value,
         location:e.target.location.value,
         description:e.target.description.value,
-        image:e.target.image
+        image:e.target.image.value
     }
 
-    postData(sceneData)
+    postData(trail, sceneData)
     form.reset();
 
 }
 
-function postData(sceneData){
-    fetch("https://test-backend-production-30ff.up.railway.app/wildlife", {
+function postData(trail, sceneData){
+    console.log(sceneData)
+    fetch(`http://localhost:3000/${trail}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body:JSON.stringify(sceneData)
-        
+        body:JSON.stringify(sceneData)        
     })
 }
 
@@ -126,7 +125,11 @@ function ammender(id){
 }
 
 function deleteScene(scene){
-    fetch(`https://test-backend-production-30ff.up.railway.app/wildlife/${scene.id}`, {
+    fetch(` http://localhost:3000/wildlife/${scene.id}`, {
         method: 'DELETE'
     })
 }
+
+document.getElementById('log-in').addEventListener('click', ()=>{
+    
+})
