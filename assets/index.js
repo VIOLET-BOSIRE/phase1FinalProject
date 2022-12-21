@@ -125,7 +125,7 @@ function ammender(id){
 }
 
 function deleteScene(scene){
-    fetch(` http://localhost:3000/wildlife/${scene.id}`, {
+    fetch(` http://localhost:3000/${scene.id}`, {
         method: 'DELETE'
     })
 }
